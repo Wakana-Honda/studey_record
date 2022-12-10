@@ -1,6 +1,85 @@
-$(document).ready(function(){
-  $('body').html('<h1>Omochi Love!!</h1>');
+// オプションを指定してSkipprの実行
+$(".theTarget").skippr({
+  // スライドショーの変化（"fade" or "slide"）
+  transition : 'fade',
+  // 変化にかかる時間（ミリ秒）
+  speed : 1000,
+  // easingの種類
+  easing : 'easeOutQuart',
+  // ナビゲーションの形（"block" or "bubble"）
+  navType : 'block',
+  // 子要素の種類（"div" or "img"）
+  childrenElementType : 'div',
+  // ナビゲーション矢印の表示（trueで表示）
+  arrows : true,
+  // スライドショーの自動再生（falseで自動再生なし）
+  autoPlay : true,
+  // 自動再生時のスライド切替間隔（ミリ秒）
+  autoPlayDuration : 500,
+  // キーボードの矢印キーによるスライド送りの設定（trueで有効）
+  keyboardOnAlways : true,
+  // 1枚目のスライド表示時に戻る矢印を表示するかどうか [false]:矢印を隠さない [true]:矢印を隠す
+  hidePrevious : false
 });
+
+// 自分の答え・・間違ってはないのだろうが
+// $(function(){
+// $('.box1').slideDown();
+// $('.box1').css({
+//   'background-color':'#0000FF',
+//   'height': '100px',
+//   'width':'200px'
+//   });
+// $('.box1').slideUp();  
+// });
+
+// answer
+$(function (){
+  $('.box1').slideDown(function (){
+    $('.box1').css({
+      'background-color': '#0000FF',
+      'width': '200px',
+      'height': '100px'
+    }).slideUp();
+  });
+});
+
+$(function(){
+  $('.box2').mouseover(function(){
+    $('.box2').addClass('box2-ext');
+  });
+  $('.box2').mouseout(function(){
+    $('.box2').removeClass('box2-ext');
+  });
+});
+
+$(function(){
+  $('.box3').on('click',function(){
+    $('.box3').addClass('box3-ext');
+  });
+  $('.box3').mouseout(function(){
+    $('.box3').removeClass('box3-ext');
+  });
+});
+
+$(function(){
+  $('.box4').on('click', function(){
+    $(this).slideUp();
+  });
+});
+
+$(function(){
+  $('button').on('click',function(){
+   $('ul').children().css('color','red'); 
+  });
+});
+
+// $(function(){
+//   $('.box2').css({
+//     'background-color': '#0000FF',
+//     'height': '100px'
+//     });
+// });
 
 // $(document).ready(function () {
 //   $('body').html('<h1>Hello jQuery!!</h1>');
