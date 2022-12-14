@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="css/app.css" />
-      <link rel="stylesheet" href="css/skippr.css" />
+    <link rel="stylesheet" href="css/skippr.css" />
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+    <!--<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />-->
+    <!--<script src="https://code.jquery.com/jquery-3.5.1.js"></script>-->
+    <!--<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
   </head>
   <body>
      <div class="container">
@@ -38,8 +42,18 @@
       <li>Products</li>
       <li>Access</li>
     </ul>
+    <br>
+    任意の英字を入力すると入力候補が表示されます（部分一致）<br>
+    <input id="keyword">
+    
+    <div class = "form-group">
+     <%= f.label :created_at, class: 'control-label'%>
+     <%= f.date_field :created_at, class: 'form-control'%>
+    </div>
+    
     <script src="js/jquery.min.js"></script>
     <script src="js/skippr.min.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
   </body>
 </html>

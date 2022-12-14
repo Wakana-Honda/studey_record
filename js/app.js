@@ -74,6 +74,36 @@ $(function(){
   });
 });
 
+$(function() {
+var words = [
+      "ActionScript",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme",
+    ];
+    $( "#keyword" ).autocomplete({
+      source: words,
+    });
+});
+
 // $(function(){
 //   $('.box2').css({
 //     'background-color': '#0000FF',
